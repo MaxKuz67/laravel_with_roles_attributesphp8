@@ -10,6 +10,7 @@ use App\Models\Role;
 use Illuminate\Http\Request;
 use App\Services\Role\Service;
 
+#[\App\Attributes\Access(roles: ["admin"])]
 class UpdateController extends BaseController
 {
     public function __construct()
