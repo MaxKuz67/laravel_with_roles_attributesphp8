@@ -13,10 +13,6 @@ use Symfony\Component\HttpFoundation\Response;
 class PermissionMiddleware
 {
 
-    private array $subscribers = [
-        IndexController::class,
-    ];
-
     public function handle(Request $request, Closure $next): Response
     {
         $controller = Route::current()?->controller;
