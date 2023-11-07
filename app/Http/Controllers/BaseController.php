@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\Role\Service;
 use Illuminate\Support\Facades\Config;
 
 class BaseController extends Controller
 {
     public $service;
 
-    public function __construct(Service $service)
+    public function __construct($service = null)
     {
         $this->service = $service;
     }
